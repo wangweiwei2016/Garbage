@@ -12,14 +12,24 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    private TextView xnh;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+//        xnh = (TextView) findViewById(R.id.xiaonvhai);
+//        Drawable[] drawable = xnh.getCompoundDrawables();
+//        // 数组下表0~3,依次是:左上右下
+//        drawable[1].setBounds(100, 0, 200, 200);
+//        xnh.setCompoundDrawables(drawable[0], drawable[1], drawable[2],
+//                drawable[3]);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 

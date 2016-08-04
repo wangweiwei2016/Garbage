@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">My Application</string>
-    <string name="app_name2">人人巴士</string>
+    <string name="app_name">人人巴士</string>
+    <string name="app_name2">点击移动</string>
+    <string name="app_name3">小女孩</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
