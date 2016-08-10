@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
+    <Button
+        android:id="@+id/tsbtn1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="登陆"
+        android:background="@drawable/bbuton_danger_rounded"
+        />
+
+    <com.example.a764l.myapplication.MyButton
+        android:id="@+id/myBtn"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:src="@mipmap/ic_tur_icon"
+        android:background="@color/bottom_bg"
+        android:scaleType="center"/>
+
+    <ToggleButton
+        android:id="@+id/tglbtn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOff="关闭"
+        android:textOn="开启"/>
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOff="关闭"
+        android:textOn="开启"
+        android:thumb="@drawable/thumb_selctor"
+        android:track="@drawable/track_selctor"
+        />
 </LinearLayout>

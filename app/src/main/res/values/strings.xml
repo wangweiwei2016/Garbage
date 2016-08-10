@@ -1,11 +1,15 @@
 <resources>
     <string name="app_name">人人巴士</string>
-    <string name="app_name2">点击移动</string>
-    <string name="app_name3">小女孩</string>
+    <string name="app_name2">各种测试</string>
+    <string name="app_name3">adapter</string>
+    <string name="app_name4">动物说</string>
+    <string name="app_name5">测试</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
 
     <string name="action_settings2">设置</string>
+
+    <string name="spin_title">选择你的段位</string>
 </resources>

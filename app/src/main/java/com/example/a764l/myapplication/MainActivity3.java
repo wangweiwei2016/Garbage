@@ -5,14 +5,15 @@ package com.example.a764l.myapplication;
  */
 
 import android.app.Activity;
+import android.database.Cursor;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.provider.ContactsContract;
 import android.widget.FrameLayout;
-
-import java.util.Timer;
-import java.util.TimerTask;
+import android.widget.ListView;
+import android.widget.SimpleCursorAdapter;
 
 
 public class MainActivity3 extends Activity {
@@ -33,6 +34,10 @@ public class MainActivity3 extends Activity {
             super.handleMessage(msg);
         }
     };
+    private String[] names = new String[]{"盖伦", "赵信", "嘉文"};
+    private String[] says = new String[]{"我将带头冲锋!", "长枪依在！", "犯我德邦者，虽远必诛！"};
+    private int[] imgIds = new int[]{R.mipmap.head_icon1, R.mipmap.head_icon2, R.mipmap.head_icon3};
+    //头像
 
     //定义走路时切换图片的方法
     void move(int i)
@@ -78,17 +83,62 @@ public class MainActivity3 extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_activity2);
+        setContentView(R.layout.testadapter);
+       //要显示的数据
+//        String[] strs = {"aaa","bbb","ccc","ddd","eee"};
+//        //创建ArrayAdapter
+//        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,strs);
+//        //获取ListView对象，通过调用setAdapter方法为ListView设置Adapter设置适配器
+         ListView list_test = (ListView) findViewById(R.id.list_test);
+//        list_test.setAdapter(adapter);
 
-        frame = (FrameLayout) findViewById(R.id.myframe);
-        //定义一个定时器对象,定时发送信息给handler
-        new Timer().schedule(new TimerTask() {
+//        List<String> data=new ArrayList<String>();
+//        data.add("第一条");
+//        data.add("第二条");
+//        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this,android.R.layout.simple_expandable_list_item_1,data);
+//       ListView list_test2= (ListView) findViewById(R.id.list_test2);
+//        list_test.setAdapter(adapter2);
 
-            @Override
-            public void run() {
-                //发送一条空信息来通知系统改变前景图片
-                handler.sendEmptyMessage(0x123);
-            }
-        }, 0,170);
+//        List<Map<String, Object>> listitem = new ArrayList<Map<String, Object>>();
+//        for (int i = 0; i < names.length; i++) {
+//            Map<String, Object> showitem = new HashMap<String, Object>();
+//            showitem.put("head", imgIds[i]);
+//            showitem.put("name", names[i]);
+//            showitem.put("says", says[i]);
+//            listitem.add(showitem);
+//        }
+//
+//        //创建一个simpleAdapter
+//        SimpleAdapter myAdapter = new SimpleAdapter(getApplicationContext(), listitem, R.layout.list_item,
+//                new String[]{"head", "name", "says"}, new int[]{R.id.imgtou, R.id.name, R.id.says});
+//        ListView listView = (ListView) findViewById(R.id.list_test);
+//        listView.setAdapter(myAdapter);
+
+        //读取联系人
+        Cursor cursor = getContentResolver()
+                .query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null, null, null, null);
+        SimpleCursorAdapter spcAdapter = new SimpleCursorAdapter(this,R.layout.list_item2,cursor,
+                new String[]{ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME,ContactsContract.CommonDataKinds.Phone.NUMBER},
+                new int[]{R.id.list_name,R.id.list_phone});
+        list_test.setAdapter(spcAdapter);
+
+//        TimePicker tpc= (TimePicker) findViewById(R.id.timepicker1);
+//        tpc.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener(){
+//
+//            @Override
+//            public void onTimeChanged(TimePicker timePicker, int i, int i1) {
+//                Toast.makeText(MainActivity3.this, "你选择的时间是："+i+"时"+i1+"分！", Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//        frame = (FrameLayout) findViewById(R.id.myframe);
+//        //定义一个定时器对象,定时发送信息给handler
+//        new Timer().schedule(new TimerTask() {
+//
+//            @Override
+//            public void run() {
+//                //发送一条空信息来通知系统改变前景图片
+//                handler.sendEmptyMessage(0x123);
+//            }
+//        }, 0,170);
     }
 }

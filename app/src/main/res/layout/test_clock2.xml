@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextClock
+        android:id="@+id/textclock1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:format12Hour="MM/dd/yy h:mmaa"
+        android:format24Hour="MM/dd/yy h:mmaa"
+        tools:targetApi="jelly_bean_mr1" />
+    <TextClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:format12Hour="MMM dd, yyyy h:mmaa"
+        android:format24Hour="MMM dd, yyyy h:mmaa"
+        tools:targetApi="jelly_bean_mr1" />
+    <TextClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:format12Hour="MMMM dd, yyyy h:mmaa"
+        android:format24Hour="MMMM dd, yyyy h:mmaa"
+        tools:targetApi="jelly_bean_mr1" />
+    <TextClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:format12Hour="E, MMMM dd, yyyy h:mmaa"
+        android:format24Hour="E, MMMM dd, yyyy h:mmaa"
+        tools:targetApi="jelly_bean_mr1" />
+    <TextClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:format12Hour="EEEE, MMMM dd, yyyy h:mmaa"
+        android:format24Hour="EEEE, MMMM dd, yyyy h:mmaa"
+        tools:targetApi="jelly_bean_mr1" />
+    <TextClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:format12Hour="Noteworthy day: 'M/d/yy"
+        android:format24Hour="Noteworthy day: 'M/d/yy"
+        tools:targetApi="jelly_bean_mr1" />
+    <AnalogClock
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        />
+    <!--<AnalogClock-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:dial="@mipmap/dial"-->
+        <!--android:hand_hour="@mipmap/hour"-->
+        <!--android:hand_minute="@mipmap/minute"/>-->
+</LinearLayout>
+

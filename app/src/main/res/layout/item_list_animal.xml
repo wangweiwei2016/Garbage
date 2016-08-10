@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="@dimen/icon_width"
+        android:layout_height="@dimen/icon_height"
+        android:id="@+id/imgicon"/>
+    !-- 定义一个竖直方向的LinearLayout,把QQ呢称与说说的文本框设置出来 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
+        android:background="@drawable/switch_btn_bg_green"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_aName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1111"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txt_aSpeak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2222"
+            android:textSize="14sp" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</LinearLayout>
+
+
+<!--
+1、为抢占了控件的组件设置:android:focusable="false"
+2、item根节点设置android:descendantFocusability="blocksDescendants"
+-->

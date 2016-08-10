@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:src="@mipmap/ic_help_view_1"/>-->
+
+<!--</LinearLayout>-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".MainActivity">
+
+<ViewFlipper
+    android:id="@+id/vflp_help"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:inAnimation="@anim/right_in"
+    android:outAnimation="@anim/right_out"
+    android:flipInterval="3000">
+
+
+    <include layout="@layout/page_help_five" />
+
+    <include layout="@layout/page_help_six" />
+
+    <include layout="@layout/page_help_seven" />
+
+</ViewFlipper>
+
+</RelativeLayout>

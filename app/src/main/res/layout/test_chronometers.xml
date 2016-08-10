@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".MainActivity2">
+
+    <Chronometer
+        android:id="@+id/chronometer1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="#ff0000"
+        android:textSize="60dip" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="开始记时" />
+
+        <Button
+            android:id="@+id/btnStop"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="停止记时" />
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="重置" />
+
+        <Button
+            android:id="@+id/btn_format"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="格式化" />
+    </LinearLayout>
+    <DatePicker
+        android:id="@+id/datepicker1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:firstDayOfWeek="6"
+        android:headerBackground="@color/clockhb"
+
+
+        >
+    </DatePicker>
+    <!--android:dayOfWeekTextAppearance="@color/day_week_text_green"-->
+    <!--android:dayOfWeekBackground="@color/day_week_blue"-->
+    <!--android:headerDayOfMonthTextAppearance="@color/hdota"-->
+    <!--android:headerMonthTextAppearance="@color/hmta"-->
+    <!--android:headerYearTextAppearance="@color/hyta"-->
+</LinearLayout>
+<!-- firstDayOfWeek=“i”  从星期（i-1）开始-->
